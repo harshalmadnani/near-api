@@ -26,8 +26,9 @@ Ensure all sensitive information has been removed from your code:
    ```
    Name: near-intents-swap-api
    Environment: Node
-   Build Command: pnpm install
-   Start Command: pnpm start:server
+   Build Command: npm install
+   Start Command: npm run start:server
+   Node Version: 18 (or latest)
    ```
 
 3. **Set Environment Variables**
@@ -195,6 +196,24 @@ curl -X POST https://your-app.onrender.com/api/swap \
 **Logs Access:**
 - Go to Render Dashboard → Your Service → Logs
 - Real-time logs available during deployment and runtime
+
+**Common Render Issues:**
+
+1. **"pnpm install" command not found**
+   - Solution: Use `npm install` instead of `pnpm install` in build command
+   - Alternative: Add `npm install -g pnpm` before the build command
+
+2. **"Service Root Directory missing"**
+   - Solution: Ensure your repository is properly connected
+   - Check that all files are committed and pushed to GitHub
+
+3. **Build timeout**
+   - Solution: Use npm instead of pnpm for faster builds
+   - Alternative: Increase build timeout in Render dashboard
+
+4. **Port issues**
+   - Render automatically sets PORT environment variable
+   - Your app should use `process.env.PORT` (already configured)
 
 ## 🎯 Next Steps
 

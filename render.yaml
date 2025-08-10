@@ -2,8 +2,8 @@ services:
   - type: web
     name: near-intents-swap-api
     env: node
-    buildCommand: pnpm install && pnpm build
-    startCommand: pnpm start:server
+    buildCommand: npm install
+    startCommand: npm run start:server
     plan: starter
     numInstances: 1
     region: oregon
@@ -13,7 +13,3 @@ services:
       - key: PORT
         value: 10000
     healthCheckPath: /api/health
-    disk:
-      name: near-intents-storage
-      mountPath: /tmp
-      sizeGB: 1
