@@ -37,9 +37,9 @@ Execute a cross-chain token swap
 **Request Body:**
 ```json
 {
-  "senderAddress": "0x6dd0d673c0c434839a344328b4cdcff53a53fb9b",
-  "senderPrivateKey": "0x9f0890725e0d332841bb908eb5d5e6d54056d736eeb087c6832b0a1ad5a2ef39",
-  "recipientAddress": "0x6dd0d673c0c434839a344328b4cdcff53a53fb9b",
+  "senderAddress": "0x0000000000000000000000000000000000000000",
+  "senderPrivateKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "recipientAddress": "0x0000000000000000000000000000000000000000",
   "originSymbol": "USDC",
   "originBlockchain": "BASE",
   "destinationSymbol": "ARB", 
