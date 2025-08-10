@@ -27,7 +27,7 @@ Ensure all sensitive information has been removed from your code:
    Name: near-intents-swap-api
    Environment: Node
    Build Command: npm install
-   Start Command: npm run start:server
+   Start Command: npx ts-node 1click-example/swap-server.ts
    Node Version: 18 (or latest)
    ```
 
